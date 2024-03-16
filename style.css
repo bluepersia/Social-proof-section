@@ -168,7 +168,25 @@ p {
         justify-content: space-between;
     }
 
-    .card_testimonial {
-        margin: 0;
+    .card_testimonial, .card_testimonial:not(:last-child)
+{
+    margin: 0;
+}
+}
+
+@media (min-width: 1280px)
+{
+    .card {
+        padding-bottom: 6.25rem;
+    }
+    .card_testimonial:nth-child(2)
+    {
+        position: relative;
+        top: 1em;
+    }
+    .card_testimonial:nth-child(3)
+    {
+        position: relative;
+        top: 2em;
     }
 }
