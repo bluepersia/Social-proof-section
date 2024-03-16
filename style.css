@@ -1,0 +1,174 @@
+:root 
+{
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    color: var(--VeryDarkMagenta);
+    min-height: 100vh;
+}
+p {
+    line-height: 1.6;
+}
+* {
+    box-sizing: border-box;
+}
+* :first-child {
+    margin-top: 0;
+}
+
+* :last-child {
+    margin-bottom: 0;
+}
+
+
+.card {
+    padding: 4em 6.66%;
+    background: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: top center, bottom center;
+    background-repeat: no-repeat;
+}
+
+
+.card_header {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+
+.card_header > * {
+    max-width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_header_intro{
+    margin-bottom: 2em;
+}
+
+.card_title {
+    font-size: 2.3rem;
+}
+
+.card_header_body {
+    font-size: 1.1rem;
+    color: var(--DarkGrayishMagenta);
+}
+
+.card_rating {
+    background-color:var(--LightGrayishMagenta);
+    padding: 1em;
+}
+
+.card_rating:not(:last-child) 
+{
+    margin-bottom: 1em;
+}
+
+.card_rating_text {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+
+.card_testimonial {
+    background-color: var(--VeryDarkMagenta);
+    color: var(--White);
+    padding: 2.5em 1.875rem;
+    border-radius: 8px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_testimonial:not(:last-child)
+{
+    margin-bottom: 1em;
+}
+
+.card_testimonial_header
+{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.card_testimonial_img {
+    border-radius: 50%;
+    width: 15.3%;
+}
+
+.card_testimonial_name {
+    margin-bottom: 0;
+}
+
+.card_testimonial_verified {
+    margin-top: -0.25em;
+    color: var(--SoftPink);
+}
+
+
+@media (min-width: 1000px)
+{
+
+    .card {
+        background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: top center, bottom center;
+        background-repeat: no-repeat;
+    }
+    .card_header 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        margin-bottom: 4em;
+    }
+
+    .card_header > * {
+        margin: 0;
+    }
+
+    .card_title {
+        font-size: 3.5rem;
+    }
+
+  
+    .card_rating {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        padding: 1em 2em;
+        position: relative;
+    }
+    .card_rating:first-child 
+    {
+        right: 6em;
+    }
+
+    .card_rating:nth-child(2)
+    {
+        right: 3em;
+    }
+
+    .card_testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: space-between;
+    }
+
+    .card_testimonial {
+        margin: 0;
+    }
+}
